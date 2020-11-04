@@ -11,15 +11,14 @@
     </div>
     <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <script>
-        const title = React.createElement('div', {
-            className: 'title'
-        }, 'Reacjs title');
+    <script type="text/babel">
 
         const image = React.createElement('img', {
             src: 'http://lorempixel.com/400/200/'
         });
+        const title = <div className="title">Reacjs title</div>;
 
         const App = React.createElement('div', null, title, image);
         const root = document.getElementById("root");
